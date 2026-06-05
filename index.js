@@ -14,16 +14,6 @@ app.use(morgan("dev"));
 console.log("Este backend ya escucha");
 
 // endpoints
-//http://localhost:3000/api/saludo
-app.get("/api/saludo", (req, res) => {
-  console.log("me llego una solicitud nueva");
-  const comida = ["manzana", "pera", "otra manzana"];
-  res.json({
-    mensaje: "Conexion creada",
-    saludo: "Bienvenido a nuestro backend",
-    comida,
-  });
-});
 //http://localhost:3000/api/productos
 app.get("/api/productos", (req, res) => {
   console.log("me llego una solicitud nueva");
