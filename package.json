@@ -4,9 +4,13 @@
   "description": "Primer backend-practica",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "dev":"node --watch index"
   },
-  "keywords": ["endpoint","middleware"],
+  "keywords": [
+    "endpoint",
+    "middleware"
+  ],
   "author": "nair paez",
   "license": "ISC",
   "devEngines": {
@@ -16,5 +20,8 @@
       "onFail": "download"
     }
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
