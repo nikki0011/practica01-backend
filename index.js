@@ -2,14 +2,22 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
+import { dirname } from 'path';
+import { fileURLToPath } from "url";
+
 
 const app = express();
-const PORT = 3000;
+const PORT = 3000; 
 
 //agregar los middlewares
 app.use(cors()); // permite conexiones remotas
 app.use(express.json()); //permite interpretar los datos que llegan en la solicitud en formato json
 app.use(morgan("dev"));
+const __dirname = dirname(fileURLToPath(import.meta.url))
+// console.log(__dirname + '/public')
+// cargar eñ siguiente archivo en forma estatica
+app.use(express.static(__dirname + '/public'))
+
 
 console.log("Este backend ya escucha");
 
